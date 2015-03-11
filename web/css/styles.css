@@ -28,3 +28,15 @@ h3 {
     border: 2px solid #d9534f;
     background-color: #FFC4C2;
 }
+
+.player1-wins {
+    text-align: left;
+}
+
+.player2-wins {
+    text-align: right;
+}
+
+.btn-primary {
+    margin-top: 25px;
+}

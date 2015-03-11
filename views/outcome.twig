@@ -10,21 +10,78 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Winner!</h1>
+
+            {% if winner == "Tie" %}
+
+                    <h1>You're BOTH winners! :D</h1>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5 button-field-height selected">
+                    <h3>You tied player 2!</h3>
+                    <p>{{player1}}</p>
+
+                </div>
+                <div class="col-sm-5 col-sm-offset-2 button-field-height selected">
+                    <h3>You tied player 1!</h3>
+                    <p>{{player2}}</p>
+                </div>
+            </div>
+
+            {% endif %}
+
+            {% if winner == "Player 1" %}
+
+                    <h1>Player 1 wins!</h1>
+
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-5 button-field-height selected">
                     <h3>Winner!</h3>
-                    <p>rock, or whatever</p>
+                    <p>{{player1}}</p>
 
                 </div>
                 <div class="col-sm-5 col-sm-offset-2 button-field-height loser">
-                    <h3>Better luck next time!</h3>
-                    <p>scissors, i guess!</p>
+                    <h3>You lost to player 1!</h3>
+                    <p>{{player2}}</p>
                 </div>
             </div>
+
+            {% endif %}
+
+            {% if winner == "Player 2" %}
+
+                    <h1>Player 2 wins!</h1>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5 button-field-height loser">
+                    <h3>You lost to player 2!</h3>
+                    <p>{{player1}}</p>
+
+                </div>
+                <div class="col-sm-5 col-sm-offset-2 button-field-height selected">
+                    <h3>Winner!</h3>
+                    <p>{{player2}}</p>
+                </div>
+            </div>
+
+            {% endif %}
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        <a href="/" class="btn btn-primary">Play again!</a>
+                    </p>
+                </div>
+            </div>
+
         </div>
     </body>
 </html>
