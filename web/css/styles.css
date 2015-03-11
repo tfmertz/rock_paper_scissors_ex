@@ -1,0 +1,21 @@
+h1 {
+    margin-bottom: 25px;
+}
+
+.button-field-height {
+    min-height: 120px;
+}
+
+.selected {
+    border: 2px solid #5cb85c;
+}
+
+.col-sm-5 {
+    background-color: #E8FAEA;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.grey {
+    background-color: #eee;
+}
