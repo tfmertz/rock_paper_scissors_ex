@@ -11,66 +11,135 @@
             <div class="row">
                 <div class="col-md-12">
 
-            {% if winner == "Tie" %}
+            {% if computer is empty %}
 
-                    <h1>You're BOTH winners! :D</h1>
+                {% if winner == "Tie" %}
 
+                        <h1>You're BOTH winners! :D</h1>
+
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-sm-5 button-field-height selected">
-                    <h3>You tied player 2!</h3>
-                    <p>{{player1}}</p>
+                <div class="row">
+                    <div class="col-sm-5 button-field-height selected">
+                        <h3>You tied player 2!</h3>
+                        <p>{{player1}}</p>
 
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-2 button-field-height selected">
+                        <h3>You tied player 1!</h3>
+                        <p>{{player2}}</p>
+                    </div>
                 </div>
-                <div class="col-sm-5 col-sm-offset-2 button-field-height selected">
-                    <h3>You tied player 1!</h3>
-                    <p>{{player2}}</p>
+
+                {% endif %}
+
+                {% if winner == "Player 1" %}
+
+                        <h1>Player 1 wins!</h1>
+
+                    </div>
                 </div>
-            </div>
 
-            {% endif %}
+                <div class="row">
+                    <div class="col-sm-5 button-field-height selected">
+                        <h3>Winner!</h3>
+                        <p>{{player1}}</p>
 
-            {% if winner == "Player 1" %}
-
-                    <h1>Player 1 wins!</h1>
-
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-2 button-field-height loser">
+                        <h3>You lost to player 1!</h3>
+                        <p>{{player2}}</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-sm-5 button-field-height selected">
-                    <h3>Winner!</h3>
-                    <p>{{player1}}</p>
+                {% endif %}
 
+                {% if winner == "Player 2" %}
+
+                        <h1>Player 2 wins!</h1>
+
+                    </div>
                 </div>
-                <div class="col-sm-5 col-sm-offset-2 button-field-height loser">
-                    <h3>You lost to player 1!</h3>
-                    <p>{{player2}}</p>
+
+                <div class="row">
+                    <div class="col-sm-5 button-field-height loser">
+                        <h3>You lost to player 2!</h3>
+                        <p>{{player1}}</p>
+
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-2 button-field-height selected">
+                        <h3>Winner!</h3>
+                        <p>{{player2}}</p>
+                    </div>
                 </div>
-            </div>
 
-            {% endif %}
+                {% endif %}
 
-            {% if winner == "Player 2" %}
+            {% else %}
 
-                    <h1>Player 2 wins!</h1>
+                {% if winner == "Tie" %}
 
+                        <h1>The computer won the tie! (wink) Get gud nerd.</h1>
+
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-sm-5 button-field-height loser">
-                    <h3>You lost to player 2!</h3>
-                    <p>{{player1}}</p>
+                <div class="row">
+                    <div class="col-sm-5 button-field-height loser">
+                        <h3>The computer beat you by decision!</h3>
+                        <p>{{player1}}</p>
 
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-2 button-field-height selected">
+                        <h3>All yr {{player1}} are belong to me!1!!!</h3>
+                        <p>{{computer}}</p>
+                    </div>
                 </div>
-                <div class="col-sm-5 col-sm-offset-2 button-field-height selected">
-                    <h3>Winner!</h3>
-                    <p>{{player2}}</p>
+
+                {% endif %}
+
+                {% if winner == "Player 1" %}
+
+                        <h1>Player 1 wins! (I'll beat you next time!)</h1>
+
+                    </div>
                 </div>
-            </div>
+
+                <div class="row">
+                    <div class="col-sm-5 button-field-height selected">
+                        <h3>Winner!</h3>
+                        <p>{{player1}}</p>
+
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-2 button-field-height loser">
+                        <h3>The computer lost to player 1!</h3>
+                        <p>{{computer}}</p>
+                    </div>
+                </div>
+
+                {% endif %}
+
+                {% if winner == "Player 2" %}
+
+                        <h1>The Computer wins! (Strap on your lollerskates, turbonerd)</h1>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-5 button-field-height loser">
+                        <h3>You lost to a block of code, loser!</h3>
+                        <p>{{player1}}</p>
+
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-2 button-field-height selected">
+                        <h3>Winner!</h3>
+                        <p>{{computer}}</p>
+                    </div>
+                </div>
+
+                {% endif %}
 
             {% endif %}
 

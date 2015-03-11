@@ -19,5 +19,10 @@
 				return $string;
 			}
 		}
+
+		function getComputerPick() {
+			$choices = ["Rock", "Paper", "Scissors"];
+			return $choices[rand(0,2)];
+		}
 	}
 ?>

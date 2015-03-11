@@ -29,6 +29,14 @@
         return $app['twig']->render('outcome.twig', array('winner' => $winner, 'player1' => $_SESSION['player1'][0], 'player2' => $_POST['player2']));
     });
 
+    $app->post('/computer', function() use ($app) {
+        $outcome = new RockPaperScissors();
+        $computerPick = $outcome->getComputerPick();
+        $winner = $outcome->gameOutcome($_SESSION['player1'][0], $computerPick);
+
+        return $app['twig']->render('outcome.twig', array('winner' => $winner, 'player1' => $_SESSION['player1'][0], 'computer' => $computerPick));
+    });
+
     return $app;
 
 ?>
