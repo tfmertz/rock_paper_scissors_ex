@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href='css/styles.css' rel='stylesheet'>
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Play Rock Paper Scissors with your friend!</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 button-field-height selected">
+                    <p class="lead">
+                        Player 1's turn!
+                    </p>
+                    <form action="/play" method="post">
+
+                        <button type="submit" name="rock" value="rock" class="btn btn-default">Rock</button>
+                        <button type="submit" name="paper" value="paper" class="btn btn-default">Paper</button>
+                        <button type="submit" name="scissors" value="scissors" class="btn btn-default">Scissors</button>
+
+                    </form>
+                </div>
+                <div class="col-sm-5 col-sm-offset-2 button-field-height grey">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
