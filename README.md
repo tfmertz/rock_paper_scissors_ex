@@ -2,7 +2,7 @@
 
 ### Cynthia Wilhelm & Tom Mertz
 
-####### March 11, 2015
+###### March 11, 2015
 
 Description: Take two players input of either rock, paper, or scissors, and output who won the game!
 
