@@ -13,19 +13,40 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-5 button-field-height selected">
+                <div class="col-sm-5 button-field-height {{col1}}">
+
+                    {% if display == "player1" %}
+
+                        <p class="lead">
+                            Player 1's turn!
+                        </p>
+                        <form action="/player2" method="post">
+
+                            <button type="submit" name="rock" value="rock" class="btn btn-default">Rock</button>
+                            <button type="submit" name="paper" value="paper" class="btn btn-default">Paper</button>
+                            <button type="submit" name="scissors" value="scissors" class="btn btn-default">Scissors</button>
+
+                        </form>
+
+                    {% endif %}
+
+                </div>
+                <div class="col-sm-5 col-sm-offset-2 button-field-height {{col2}}">
+
+                    {% if display == "player2" %}
+
                     <p class="lead">
-                        Player 1's turn!
+                        Player 2's turn!
                     </p>
-                    <form action="/play" method="post">
+                    <form action="/outcome" method="post">
 
                         <button type="submit" name="rock" value="rock" class="btn btn-default">Rock</button>
                         <button type="submit" name="paper" value="paper" class="btn btn-default">Paper</button>
                         <button type="submit" name="scissors" value="scissors" class="btn btn-default">Scissors</button>
 
                     </form>
-                </div>
-                <div class="col-sm-5 col-sm-offset-2 button-field-height grey">
+
+                    {% endif %}
 
                 </div>
             </div>

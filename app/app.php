@@ -12,7 +12,17 @@
 
     $app->get('/', function () use ($app) {
 
-    return $app['twig']->render('form.twig');
+    return $app['twig']->render('form.twig', array('col1' => 'selected', 'col2' => 'grey', 'display' => 'player1'));
+    });
+
+    $app->post('/player2', function() use ($app) {
+
+        return $app['twig']->render('form.twig', array('col1' => 'grey', 'col2' => 'selected', 'display' => 'player2'));
+    });
+
+    $app->post('/outcome', function() use ($app) {
+
+        return $app['twig']->render('outcome.twig');
     });
 
     return $app;
